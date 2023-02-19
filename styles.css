@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+  width: 80%;
+  height: 100%;
+  padding: 0 10%;
+  margin: 0;
+
+  font-family: 'Rubik', sans-serif;
+  color: #FFF !important;
+  background-color: rgb(59, 25, 25);
+}
+
+a {
+  color: rgba(255, 255, 255, 100%);
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1em;
+  color: rgba(219, 127, 111, 0.9);
+}
+
+.introduction span.rowoffires {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5em;
+  gap: 0.5em;
+
+  width: 80vw;
+}
+
+.introduction {
+  font-size: 1.25em;
+  padding-right: 50%;
+}
+
+.grid__projects, .grid__links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.projects__item, .links__item {
+  width: calc(25% - 1em);
+  overflow: hidden;
+  text-decoration: none;
+
+  border: rgba(219, 127, 111, 0.2) 0.1em solid;
+  box-sizing: border-box;
+
+  height: 100%;
+}
+
+.projects__item h1, .links__item h1 {
+  padding: 0 1em;
+  box-sizing: border-box;
+
+  transition: transform;
+  transition-duration: 0.2s;
+
+  font-size: 1em;
+}
+
+.projects__item h1 i, .links__item h1 i {
+  padding-right: 0.25em;
+  font-size: 1em;
+  color: rgba(219, 127, 111, 0.5);
+}
+
+.projects__item img {
+  width: 100%;
+  object-fit: cover;
+  height: 10em;
+
+  transition: transform opacity;
+  transition-duration: 0.2s;
+}
+
+.projects__item:hover > img {
+  transform: translateY(-50%);
+  opacity: 50%;
+}
+
+.projects__item:hover > h1 {
+  transform: translateY(-2.5em);
+}
+
+.projects__item.dead:hover > h1 {
+  transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  opacity: 50%;
+  padding: 5em;
+}
+
+@media screen and (max-width: 1200px) {
+  .projects__item, .links__item {
+    width: calc(50% - 1em);
+    overflow: hidden;
+    text-decoration: none;
+  
+    border: rgba(219, 127, 111, 0.2) 0.1em solid;
+    box-sizing: border-box;
+  }
+  .introduction {
+    font-size: 1.25em;
+    padding-right: 0%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .projects__item, .links__item {
+    width: calc(100% - 1em);
+    overflow: hidden;
+    text-decoration: none;
+  
+    border: rgba(219, 127, 111, 0.2) 0.1em solid;
+    box-sizing: border-box;
+  }
+  .introduction {
+    font-size: 1.25em;
+    padding-right: 0%;
+  }
+}
